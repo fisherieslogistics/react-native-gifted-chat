@@ -92,12 +92,12 @@ class GiftedChat extends React.Component {
     return currentMessages.concat(messages);
   }
 
-  getChildContext() {
+  /*getChildContext() {
     return {
       actionSheet: () => this._actionSheetRef,
       getLocale: this.getLocale,
     };
-  }
+  }*/
 
   componentWillMount() {
     this.setIsMounted(true);
@@ -407,7 +407,7 @@ class GiftedChat extends React.Component {
   render() {
     if (this.state.isInitialized === true) {
       return (
-        <ActionSheet ref={component => this._actionSheetRef = component}>
+        {/*<ActionSheet ref={component => this._actionSheetRef = component}>*/}
           <View
             style={styles.container}
             onLayout={(e) => {
@@ -429,7 +429,7 @@ class GiftedChat extends React.Component {
             {this.renderMessages()}
             {this.renderInputToolbar()}
           </View>
-        </ActionSheet>
+       {/* </ActionSheet>*/}
       );
     }
     return (
@@ -460,10 +460,10 @@ const styles = StyleSheet.create({
   },
 });
 
-GiftedChat.childContextTypes = {
+/*GiftedChat.childContextTypes = {
   actionSheet: React.PropTypes.func,
   getLocale: React.PropTypes.func,
-};
+};*/
 
 GiftedChat.defaultProps = {
   messages: [],
