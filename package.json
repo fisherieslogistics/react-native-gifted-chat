@@ -1,5 +1,5 @@
 {
-  "name": "react-native-gifted-chat",
+  "name": "@fll/react-native-gifted-chat",
   "version": "0.0.10",
   "description": "The most complete chat UI for React Native",
   "main": "index.js",
