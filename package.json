@@ -29,7 +29,7 @@
     "eslint-plugin-react-native": "^2.0.0"
   },
   "dependencies": {
-    "@exponent/react-native-action-sheet": "git+https://github.com/FaridSafi/react-native-action-sheet.git",
+    "@fll/react-native-action-sheet": "git+https://github.com/fisherieslogistics/react-native-action-sheet.git",
     "md5": "^2.1.0",
     "moment": "^2.13.0",
     "react-native-communications": "^2.1.0",
