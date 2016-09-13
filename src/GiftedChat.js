@@ -407,29 +407,27 @@ class GiftedChat extends React.Component {
   render() {
     if (this.state.isInitialized === true) {
       return (
-        {/*<ActionSheet ref={component => this._actionSheetRef = component}>*/}
-          <View
-            style={styles.container}
-            onLayout={(e) => {
-              if (Platform.OS === 'android') {
-                // fix an issue when keyboard is dismissing during the initialization
-                const layout = e.nativeEvent.layout;
-                if (this.getMaxHeight() !== layout.height && this.getIsFirstLayout() === true) {
-                  this.setMaxHeight(layout.height);
-                  this.setState({
-                    messagesContainerHeight: this.prepareMessagesContainerHeight(this.getMaxHeight() - this.getMinInputToolbarHeight()),
-                  });
-                }
+        <View
+          style={styles.container}
+          onLayout={(e) => {
+            if (Platform.OS === 'android') {
+              // fix an issue when keyboard is dismissing during the initialization
+              const layout = e.nativeEvent.layout;
+              if (this.getMaxHeight() !== layout.height && this.getIsFirstLayout() === true) {
+                this.setMaxHeight(layout.height);
+                this.setState({
+                  messagesContainerHeight: this.prepareMessagesContainerHeight(this.getMaxHeight() - this.getMinInputToolbarHeight()),
+                });
               }
-              if (this.getIsFirstLayout() === true) {
-                this.setIsFirstLayout(false);
-              }
-            }}
-          >
-            {this.renderMessages()}
-            {this.renderInputToolbar()}
-          </View>
-       {/* </ActionSheet>*/}
+            }
+            if (this.getIsFirstLayout() === true) {
+              this.setIsFirstLayout(false);
+            }
+          }}
+        >
+          {this.renderMessages()}
+          {this.renderInputToolbar()}
+        </View>
       );
     }
     return (
@@ -459,11 +457,6 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 });
-
-/*GiftedChat.childContextTypes = {
-  actionSheet: React.PropTypes.func,
-  getLocale: React.PropTypes.func,
-};*/
 
 GiftedChat.defaultProps = {
   messages: [],
