@@ -36,15 +36,6 @@ const styles = StyleSheet.create({
     height: 44,
     justifyContent: 'flex-end',
   },
-  text: {
-    color: '#0084ff',
-    fontWeight: '600',
-    fontSize: 17,
-    backgroundColor: 'transparent',
-    marginBottom: 12,
-    marginLeft: 10,
-    marginRight: 10,
-  },
 });
 
 Send.defaultProps = {
