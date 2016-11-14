@@ -76,6 +76,15 @@ const styles = StyleSheet.create({
   accessory: {
     height: 44,
   },
+  text: {
+    color: '#0084ff',
+    fontWeight: '600',
+    fontSize: 17,
+    backgroundColor: 'transparent',
+    marginBottom: 12,
+    marginLeft: 10,
+    marginRight: 10,
+  },
 });
 
 InputToolbar.defaultProps = {
