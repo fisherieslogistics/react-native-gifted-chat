@@ -19,7 +19,11 @@ export default class InputToolbar extends React.Component {
     if (this.props.renderSend) {
       return this.props.renderSend(this.props);
     }
-    return <Send {...this.props}/>;
+    return (
+      <Send {...this.props}>
+        <Text style={[styles.text, this.props.textStyle]}>{this.props.label}</Text>
+      </Send>
+     );
   }
 
   renderComposer() {
