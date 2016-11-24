@@ -255,7 +255,8 @@ class GiftedChat extends React.Component {
       this.onKeyboardWillHide(e);
     }
     this.setIsTypingDisabled(false);
-    this.onSend([{text: this.props.text.trim()}]);
+    const text = this.state.text || '';
+    this.onSend([{text: text.trim()}], true);
   }
 
   scrollToBottom(animated = true) {
